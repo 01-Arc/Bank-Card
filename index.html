@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive card details form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- 0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+  Completed state start
+
+  Thank you!
+  We've added your card details
+  Continue -->
+  <main>
+    <div id="mainheader">
+      <img src="images/bg-card-back.png" id="img1" alt="">
+      <img src="images/bg-card-front.png" id="img2" alt="">
+      <div id="img1info"><span id="creacvc">000</span></div>
+      <div id="img2info">
+        <div id="headpart">
+          <div id="circle1"></div>
+          <div id="circle2"></div>
+        </div>
+        <div id="footpart">
+          <span id="creanum">0000 0000 0000 0000</span>
+          <div id="namedate">
+            <span id="creaname">JANE APPLESEED</span>
+            <span><span id="creamm">00</span>/<span id="creayy">00</span></span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div id="mainfooter">
+      <form action="#">
+        <label for="cname">
+          <span>CARDHOLDER NAME</span>
+          <input required type="text" name="cname" id="cname" placeholder="e.g. Jane Appleseed">
+          <h6 id="ername"></h6>
+        </label>
+        <label for="cnum">
+          <span>CARD NUMBER</span>
+          <input required type="number" name="cnum" id="cnum" placeholder="e.g. 1234 5678 9123 0000">
+          <h6 id="ernum"></h6>
+        </label>
+        <div id="dateinps">
+          <label for="month">
+            <span>EXP. DATE <span id="in">(MM/YY)</span></span>
+            <div id="dt">
+              <input required type="number" name="month" id="month" placeholder="MM">
+              <input required type="number" name="year" id="year" placeholder="YY">
+            </div>
+            <h6 id="erdate"></h6>
+          </label>
+          <label for="cvc">
+            <span>CVC</span>
+            <input required type="number" name="cvc" id="cvc" placeholder="e.g. 123">
+            <h6 id="ercvc"></h6>
+          </label>
+        </div>
+        <button type="button" onclick={getval()}>Confirm</button>
+      </form>
+    </div>
+    <div id="thank">
+      <div id="checkedcircle">
+        <img src="images/check (1).png" alt="#">
+      </div>
+      <h2>THANK YOU !</h2>
+      <span>We've added you card details</span>
+      <button>Continue</button>
+
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>
